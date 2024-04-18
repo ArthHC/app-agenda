@@ -1,6 +1,9 @@
 package br.com.projeto_aula03_04;
 
+import static android.os.StrictMode.setThreadPolicy;
+
 import android.os.Bundle;
+import android.os.StrictMode;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
@@ -21,6 +24,8 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
+        setThreadPolicy(policy);
         setContentView(R.layout.activity_main);
         initialize();
         //username.setText("my friend");
