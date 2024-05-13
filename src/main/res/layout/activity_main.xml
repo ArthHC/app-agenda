@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
     android:background="@drawable/login_background"
     android:gravity="center"
-    android:padding="16dp"
+    android:padding="10dp"
     tools:context=".MainActivity">
 
     <LinearLayout
@@ -78,5 +78,7 @@
         </LinearLayout>
 
     </LinearLayout>
+
+
 
 </RelativeLayout>

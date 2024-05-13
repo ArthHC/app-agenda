@@ -2,4 +2,8 @@
     <string name="app_name">Projeto_aula03-04</string>
     <string name="logoengenharia" />
     <string name="login">Login</string>
+    <string name="add">Save</string>
+    <string name="contactList">Contact list</string>
+    <string name="addContact">Add a new contact</string>
+    <string name="exit">Exit</string>
 </resources>

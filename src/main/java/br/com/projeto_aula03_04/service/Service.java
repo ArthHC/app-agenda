@@ -8,7 +8,8 @@ import com.sun.jersey.api.client.WebResource;
 
 public class Service {
 
-    private String url = "http://192.168.22.107/app-agenda/api";
+    //url base do backend (Sprngboot)
+    private String url = "http://192.168.0.117:8080/app-agenda/api/";
     private Client clientJersey = null;
     private WebResource resource = null;
 
@@ -36,7 +37,7 @@ public class Service {
 
     public String Get(String path) {
         String resposta = resource.path(path)
-                .header("Content-Type", "application/jaon")
+                .header("Content-Type", "application/json")
                 .get(String.class);
         Log.i(null, "Saida:" + resposta);
 
