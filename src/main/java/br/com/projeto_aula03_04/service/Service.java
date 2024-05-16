@@ -9,7 +9,7 @@ import com.sun.jersey.api.client.WebResource;
 public class Service {
 
     //url base do backend (Sprngboot)
-    private String url = "http://192.168.0.117:8080/app-agenda/api/";
+    private String url = "http://192.168.37.231:8080/app-agenda/api/";
     private Client clientJersey = null;
     private WebResource resource = null;
 

@@ -6,4 +6,8 @@
     <string name="contactList">Contact list</string>
     <string name="addContact">Add a new contact</string>
     <string name="exit">Exit</string>
+    <string name="about">Sobre o App</string>
+    <string name="textAboutApp">Aplicativo desenvolvido pelos alunos Arthur H. e Bruno C. para a matéria Desenvolvimento Mobile, ministrada pelo professor Jurandir Rodrigues. Valendo 100% da nota M1.</string>
+    <string name="password">Password</string>
+    <string name="username">Username</string>
 </resources>

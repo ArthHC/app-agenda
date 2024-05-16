@@ -62,19 +62,16 @@
         android:src="@drawable/logo_es"
         android:contentDescription="@string/logoengenharia"
         android:layout_alignParentEnd="true"
-        android:layout_alignParentTop="true"/>
-
-    <TextView
-        android:id="@+id/textView1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Arthur e Bruno"
-        android:textSize="16sp"
-        android:textColor="@android:color/white"
-        android:layout_marginStart="16dp"
-        android:layout_marginBottom="16dp"
-        android:layout_alignParentStart="true"
         android:layout_alignParentBottom="true"/>
 
+    <ImageView
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:src="@drawable/info_incon"
+        android:contentDescription="@string/logoengenharia"
+        android:layout_alignParentEnd="true"
+        android:clickable="true"
+        android:id="@+id/info"
+        />
 
 </RelativeLayout>

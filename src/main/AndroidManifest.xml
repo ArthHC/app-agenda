@@ -38,7 +38,12 @@
 
         <activity
             android:screenOrientation="nosensor"
-            android:name="br.com.projeto_aula03_04.ActionsView"
+            android:name="br.com.projeto_aula03_04.MenuView"
+            android:label="projeto_aula03_04" />
+
+        <activity
+            android:screenOrientation="nosensor"
+            android:name="br.com.projeto_aula03_04.InfoView"
             android:label="projeto_aula03_04" />
 
     </application>

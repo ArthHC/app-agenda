@@ -11,11 +11,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
-import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.graphics.Insets;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
 
 import com.google.gson.Gson;
 
@@ -37,14 +33,11 @@ public class MainActivity extends AppCompatActivity {
         setThreadPolicy(policy);
         setContentView(R.layout.activity_main);
         initialize();
-        //username.setText("my friend");
-        Log.i(null,"opa chequei aqui...");
 
 
         btnLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                showMessage("Bem vindo " + username.getText());
                 efetuaLogin();
             }
         });
@@ -64,9 +57,11 @@ public class MainActivity extends AppCompatActivity {
 
         if(msg.getAuth()) {
             Log.i(null, "Login Autorizado - Prox Tela" + msg.getMsg());
-            Intent intent = new Intent(this, ActionsView.class);
+            showMessage("Bem vindo " + username.getText());
+            Intent intent = new Intent(this, MenuView.class);
             startActivity(intent);
         } else {
+            showMessage("Usuário ou senha incorretos");
             Log.i(null, "Login não autorizado." + msg.getMsg());
         }
     }

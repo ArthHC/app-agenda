@@ -3,6 +3,6 @@
     <domain-config cleartextTrafficPermitted="True">
         <!-- Como estamos colocando o IP no qual o app vai acessar, o mesmo precisa e irá
         mudar conforme a rede que está conectada. -->
-        <domain includeSubdomains="True">192.168.0.117</domain>
+        <domain includeSubdomains="True">192.168.37.231</domain>
     </domain-config>
 </network-security-config>

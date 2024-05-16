@@ -2,21 +2,22 @@ package br.com.projeto_aula03_04;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.os.PersistableBundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 
-import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
-public class ActionsView extends AppCompatActivity {
+public class MenuView extends AppCompatActivity {
 
     Button btnList, btnAdd, btnExit;
+
+    ImageView info;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.actions_view);
+        setContentView(R.layout.menu_view);
         initialize();
 
         btnList.setOnClickListener(new View.OnClickListener() {
@@ -40,6 +41,13 @@ public class ActionsView extends AppCompatActivity {
             }
         });
 
+        info.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                callInfoView();
+            }
+        });
+
     }
 
     public void callListContactView() {
@@ -56,9 +64,15 @@ public class ActionsView extends AppCompatActivity {
         startActivity(intent);
     }
 
+    public void callInfoView() {
+        Intent intent = new Intent(this, InfoView.class);
+        startActivity(intent);
+    }
+
     public void initialize() {
         btnList = findViewById(R.id.contactList_btn);
         btnAdd = findViewById(R.id.addContact_btn);
         btnExit = findViewById(R.id.exit_btn);
+        info = findViewById(R.id.info);
     }
 }

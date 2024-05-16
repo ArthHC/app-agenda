@@ -1,5 +1,6 @@
 package br.com.projeto_aula03_04;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.os.PersistableBundle;
 import android.util.Log;
@@ -46,10 +47,12 @@ public class AddContactView extends AppCompatActivity {
         req.put("phone", contactPhone.getText().toString());
         req.put("email", contactEmail.getText().toString());
         req.put("birthDate", contactPhone.getText().toString());
-        req.put("description", contactPhone.getText().toString());
+        req.put("description", contactDescription.getText().toString());
         String res = service.Post("/contacts/", req);
         Log.i(null, "Conver jason" + res.toString());
         showMessage("New contact saved");
+        Intent intent = new Intent(this, MenuView.class);
+        startActivity(intent);
     }
 
     public void showMessage(String msg) {
